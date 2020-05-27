@@ -26,6 +26,7 @@ ul {
 }
 .link {
   text-decoration: none;
+  cursor: pointer;
 }
 p {
   margin-top: 0;
@@ -97,6 +98,8 @@ p {
 }
 
 .contact-nav .link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -111,7 +114,7 @@ p {
 }
 .contact-nav .mail::before {
   content: "";
-  display: inline-flex;
+
   width: 16px;
   height: 11.2px;
   margin-right: 10px;
@@ -120,7 +123,7 @@ p {
 }
 .contact-nav .tel::before {
   content: "";
-  display: inline-flex;
+
   width: 10px;
   height: 15px;
   margin-right: 10px;
@@ -472,6 +475,8 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
 }
 .footer-logo {
   display: block;
@@ -528,7 +533,7 @@ p {
   line-height: 1.87;
 }
 .footer-button {
-  display: inline-block;
+  display: flex;
   min-width: 200px;
   height: 50px;
   padding: 10px 45px;
@@ -554,12 +559,13 @@ p {
   font-size: 16px;
   line-height: 1.87;
 }
-.button-title::after {
+.footer-button::after {
   content: "";
   display: inline-flex;
   width: 24px;
-  /* background-image: url("../imeges/icon-send.svg"); */
+  background-image: url("../imeges/icon-send.svg");
   background-size: contain;
   background-position: center;
-  background-color: aliceblue;
+  background-repeat: no-repeat;
+  margin-left: 10px;
 }
