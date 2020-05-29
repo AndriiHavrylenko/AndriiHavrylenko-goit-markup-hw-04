@@ -34,7 +34,7 @@ p {
   padding: 0;
 }
 .container {
-  outline: 2px solid black;
+  /* outline: 2px solid black; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -112,23 +112,20 @@ p {
 .contact-nav .link:hover {
   color: var(--accent-color);
 }
-.contact-nav .mail::before {
-  content: "";
-
+.contact-nav .icon-mail {
   width: 16px;
   height: 11.2px;
   margin-right: 10px;
-  background-image: url("../imeges/mail-logo.svg");
-  background-size: contain;
+  fill: currentColor;
 }
-.contact-nav .tel::before {
-  content: "";
-
+.contact-nav .icon-phone {
   width: 10px;
   height: 15px;
   margin-right: 10px;
-  background-image: url("../imeges/phone-logo.svg");
-  background-size: contain;
+  fill: currentColor;
+}
+.icon-phone:hover {
+  --color5: var(--accent-color);
 }
 /* hero */
 
@@ -142,7 +139,7 @@ p {
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url("../imeges/Header-img\ .jpg");
+    url("../images/Header-img\ .jpg");
   background-size: cover;
   background-position: center;
 }
@@ -193,36 +190,43 @@ p {
 .characteristic .item:nth-child(4) {
   margin-right: 0;
 }
-.characteristic .item::before {
-  outline: 2px solid black;
-  content: "";
-  display: block;
+.characteristic .icon {
+  display: flex;
+  width: 270px;
   height: 120px;
   margin-bottom: 30px;
-
   background: #f5f4fa;
   border-radius: 4px;
 }
-.characteristic .item:nth-child(1)::before {
-  background-image: url("../imeges/antenna.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.characteristic .antenna {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 67px;
+  height: 70px;
 }
-.characteristic .item:nth-child(2)::before {
-  background-image: url("../imeges/clock.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.characteristic .clock {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 67px;
+  height: 70px;
 }
-.characteristic .item:nth-child(3)::before {
-  background-image: url("../imeges/diagram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.characteristic .diagram {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 67px;
+  height: 70px;
 }
-.characteristic .item:nth-child(4)::before {
-  background-image: url("../imeges/astronaut.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.characteristic .astronaut {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 67px;
+  height: 70px;
 }
+
 .section-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -346,6 +350,13 @@ p {
   justify-content: center;
   border-radius: 50%;
 }
+.team .icon {
+  width: 20px;
+  height: 20px;
+}
+.team .icon:hover {
+  --color3: #ffffff;
+}
 /* клиенты */
 .clients .container {
   padding-top: 94px;
@@ -366,9 +377,51 @@ p {
   padding-top: 50px;
   padding-bottom: 94px;
 }
-.clients img:hover {
-  background: var(--accent-color);
+
+.clients .icon-1 {
+  width: 45px;
+  height: 50px;
 }
+.clients .icon-2 {
+  width: 40px;
+  height: 52px;
+}
+.clients .icon-3 {
+  width: 41px;
+  height: 43px;
+}
+.clients .icon-4 {
+  width: 80px;
+  height: 42px;
+  --color2: #afb1b8;
+}
+.clients .icon-5 {
+  width: 59px;
+  height: 47px;
+}
+.clients .icon-6 {
+  width: 89px;
+  height: 46px;
+}
+.clients .icon-1:hover {
+  --color3: var(--accent-color);
+}
+.clients .icon-2:hover {
+  --color3: var(--accent-color);
+}
+.clients .icon-3:hover {
+  --color3: var(--accent-color);
+}
+.clients .icon-4:hover {
+  --color2: var(--accent-color);
+}
+.clients .icon-5:hover {
+  --color3: var(--accent-color);
+}
+.clients .icon-6:hover {
+  --color3: var(--accent-color);
+}
+
 .clients .item:hover,
 .clients .item:focus {
   border: 1px solid #2196f3;
@@ -385,11 +438,6 @@ p {
   border-radius: 4px;
 }
 
-.clients .link-logo:hover,
-.clients .link-logo:focus {
-  color: var(--accent-color);
-  align-items: center;
-}
 /* portfolio page */
 .button {
   display: flex;
@@ -437,6 +485,10 @@ p {
   display: block;
   text-decoration: none;
 }
+.portfolio-link:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
 .card-block {
   padding: 20px 24px;
 
@@ -477,6 +529,14 @@ p {
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.1);
+}
+.footer-page .link:hover {
+  background: var(--accent-color);
+}
+.footer-page .icon {
+  width: 20px;
+  height: 20px;
+  --color3: #ffffff;
 }
 .footer-logo {
   display: block;
@@ -559,13 +619,9 @@ p {
   font-size: 16px;
   line-height: 1.87;
 }
-.footer-button::after {
-  content: "";
-  display: inline-flex;
+.footer-button .icon {
   width: 24px;
-  background-image: url("../imeges/icon-send.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 24px;
+
   margin-left: 10px;
 }
