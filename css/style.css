@@ -259,6 +259,7 @@ p {
 }
 .team .link:hover {
   background: var(--accent-color);
+  --color3: #ffffff;
 }
 .project-title {
   margin-top: 0;
@@ -288,7 +289,6 @@ p {
   margin-right: 30px;
   text-align: center;
   background: #ffffff;
-  /* material shadow v1 */
 
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -344,9 +344,7 @@ p {
   width: 20px;
   height: 20px;
 }
-.team .icon:hover {
-  --color3: #ffffff;
-}
+
 /* клиенты */
 .clients .container {
   padding-top: 94px;
@@ -383,7 +381,6 @@ p {
 .clients .icon-4 {
   width: 80px;
   height: 42px;
-  --color2: #afb1b8;
 }
 .clients .icon-5 {
   width: 59px;
@@ -393,29 +390,13 @@ p {
   width: 89px;
   height: 46px;
 }
-.clients .icon-1:hover {
-  --color3: var(--accent-color);
-}
-.clients .icon-2:hover {
-  --color3: var(--accent-color);
-}
-.clients .icon-3:hover {
-  --color3: var(--accent-color);
-}
-.clients .icon-4:hover {
-  --color2: var(--accent-color);
-}
-.clients .icon-5:hover {
-  --color3: var(--accent-color);
-}
-.clients .icon-6:hover {
-  --color3: var(--accent-color);
-}
 
 .clients .item:hover,
 .clients .item:focus {
   border: 1px solid #2196f3;
+  --color3: var(--accent-color);
 }
+
 .clients .item {
   display: flex;
   justify-content: center;
@@ -486,8 +467,8 @@ p {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  /* border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; */
 }
 .card-image {
   display: block;
